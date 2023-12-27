@@ -1,0 +1,10 @@
+@import "@radix-ui/themes/styles.css";
+
+body {
+  margin: 0px;
+}
+
+.radix-themes {
+  --default-font-family: var(--font-pretendard);
+  --code-font-family: var(--font-jetbrainsmono);
+}

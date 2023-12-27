@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { JetBrains_Mono } from "next/font/google";
 import classNames from "classnames";
-import "@/app/globals.css";
+import Providers from "@/app/Providers";
+import "@/app/theme-config.css";
 
 const pretendard = localFont({
-  src: "./PretendardVariable.woff2",
+  src: "../public/PretendardVariable.woff2",
   display: "swap",
   variable: "--font-pretendard",
 });
@@ -26,9 +27,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={classNames(pretendard.variable, jetbrainsMono.variable)}>
-        {children}
+    <html
+      lang="en"
+      className={classNames(pretendard.variable, jetbrainsMono.variable)}
+      suppressHydrationWarning
+    >
+      <body>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

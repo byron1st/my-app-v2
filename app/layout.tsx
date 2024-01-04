@@ -3,7 +3,10 @@ import localFont from "next/font/local";
 import { JetBrains_Mono } from "next/font/google";
 import classNames from "classnames";
 import Providers from "@/app/Providers";
+import Toolbar from "@/lib/components/common/Toolbar";
 import "@/app/theme-config.css";
+import "@/app/global.css";
+import Footer from "@/lib/components/common/Footer";
 
 const pretendard = localFont({
   src: "../public/PretendardVariable.woff2",
@@ -33,7 +36,11 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Toolbar />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

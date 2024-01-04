@@ -1,6 +1,6 @@
 "use client";
 
-import MenuButton from "@/app/MenuButton";
+import MenuButton from "@/lib/components/home/MenuButton";
 import { MixIcon, QuestionMarkIcon, ReaderIcon } from "@radix-ui/react-icons";
 import { Flex } from "@radix-ui/themes";
 

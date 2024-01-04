@@ -1,6 +1,5 @@
 import { Container, Flex, Heading } from "@radix-ui/themes";
-import Menus from "@/app/Menus";
-import ColorModeSelector from "@/app/ColorModeSelector";
+import Menus from "@/lib/components/home/Menus";
 
 export default function Home() {
   return (
@@ -9,14 +8,12 @@ export default function Home() {
         direction="column"
         justify="center"
         align="center"
-        style={{ height: "100vh" }}
+        style={{ height: "calc(100vh - 16px - 40px)" }}
       >
         <Heading mb="4">{`Hwi's Homepage`}</Heading>
 
         <Menus />
       </Flex>
-
-      <ColorModeSelector />
     </Container>
   );
 }

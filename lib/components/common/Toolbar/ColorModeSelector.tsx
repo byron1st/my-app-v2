@@ -1,7 +1,7 @@
 "use client";
 
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
-import { Box, IconButton } from "@radix-ui/themes";
+import { IconButton } from "@radix-ui/themes";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -19,14 +19,12 @@ export default function ColorModeSelector() {
   }, []);
 
   return mounted ? (
-    <Box position="absolute" style={{ top: 10, left: 10 }}>
-      <IconButton variant="ghost" radius="full" onClick={toggleColorTheme}>
-        {resolvedTheme === "light" ? (
-          <SunIcon width={18} height={18} />
-        ) : resolvedTheme === "dark" ? (
-          <MoonIcon width={18} height={18} />
-        ) : null}
-      </IconButton>
-    </Box>
+    <IconButton variant="ghost" radius="full" onClick={toggleColorTheme} m="1">
+      {resolvedTheme === "light" ? (
+        <SunIcon width={18} height={18} />
+      ) : resolvedTheme === "dark" ? (
+        <MoonIcon width={18} height={18} />
+      ) : null}
+    </IconButton>
   ) : null;
 }

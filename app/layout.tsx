@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import classNames from "classnames";
 import { Container } from "@radix-ui/themes";
 import Toolbar from "@/lib/components/common/Toolbar";
@@ -8,7 +10,6 @@ import Footer from "@/lib/components/common/Footer";
 import Providers from "@/app/Providers";
 import "@/app/theme-config.css";
 import "@/app/global.css";
-import { Analytics } from "@vercel/analytics/react";
 
 const pretendard = localFont({
   src: "../public/PretendardVariable.woff2",
@@ -48,6 +49,7 @@ export default function RootLayout({
         </Providers>
 
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

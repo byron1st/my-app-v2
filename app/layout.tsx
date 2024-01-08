@@ -8,6 +8,7 @@ import Footer from "@/lib/components/common/Footer";
 import Providers from "@/app/Providers";
 import "@/app/theme-config.css";
 import "@/app/global.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const pretendard = localFont({
   src: "../public/PretendardVariable.woff2",
@@ -45,6 +46,8 @@ export default function RootLayout({
           </Container>
           <Footer />
         </Providers>
+
+        <Analytics />
       </body>
     </html>
   );

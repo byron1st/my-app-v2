@@ -1,10 +1,6 @@
 import InterestList from "@/lib/components/about/Interest/InterestList";
 import SectionLayout from "@/lib/components/about/SectionLayout";
-
-export type Interest = {
-  developer: string[];
-  researcher: string[];
-};
+import type { Interest } from "@/lib/types";
 
 export default function Interest({ interest }: { interest: Interest }) {
   return (

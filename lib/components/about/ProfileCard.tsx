@@ -1,12 +1,6 @@
 import Image from "next/image";
 import { Text, Flex, Heading } from "@radix-ui/themes";
-
-export type Profile = {
-  name: string;
-  careers: string[];
-  introduction: string;
-  sites: { name: string; url: string }[];
-};
+import type { Profile } from "@/lib/types";
 
 export default function ProfileCard({ profile }: { profile: Profile }) {
   return (

@@ -1,6 +1,6 @@
 import { Flex, Link, Tooltip } from "@radix-ui/themes";
-import { IconProps } from "@radix-ui/react-icons/dist/types";
 import { useMemo } from "react";
+import { RadixIcon } from "@/lib/types";
 
 export default function LinkItem({
   site,
@@ -9,9 +9,7 @@ export default function LinkItem({
 }: {
   site: string;
   url: string;
-  Icon: React.ForwardRefExoticComponent<
-    IconProps & React.RefAttributes<SVGSVGElement>
-  >;
+  Icon: RadixIcon;
 }) {
   const shortUrl = useMemo(() => url.slice("https://".length), [url]);
 

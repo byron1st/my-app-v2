@@ -1,17 +1,15 @@
 "use client";
 
-import { IconProps } from "@radix-ui/react-icons/dist/types";
 import { Text, Flex, IconButton } from "@radix-ui/themes";
 import { useRouter } from "next/navigation";
+import { RadixIcon } from "@/lib/types";
 
 export default function MenuButton({
   Icon,
   label,
   href,
 }: {
-  Icon: React.ForwardRefExoticComponent<
-    IconProps & React.RefAttributes<SVGSVGElement>
-  >;
+  Icon: RadixIcon;
   label: string;
   href: string;
 }) {

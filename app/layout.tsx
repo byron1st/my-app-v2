@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { JetBrains_Mono } from "next/font/google";
 import classNames from "classnames";
-import Providers from "@/app/Providers";
+import { Container } from "@radix-ui/themes";
 import Toolbar from "@/lib/components/common/Toolbar";
+import Footer from "@/lib/components/common/Footer";
+import Providers from "@/app/Providers";
 import "@/app/theme-config.css";
 import "@/app/global.css";
-import Footer from "@/lib/components/common/Footer";
 
 const pretendard = localFont({
   src: "../public/PretendardVariable.woff2",
@@ -38,7 +39,9 @@ export default function RootLayout({
       <body>
         <Providers>
           <Toolbar />
-          {children}
+          <Container size="2" p="4">
+            {children}
+          </Container>
           <Footer />
         </Providers>
       </body>

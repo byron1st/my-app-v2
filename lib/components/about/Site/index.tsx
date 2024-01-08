@@ -1,8 +1,7 @@
 import { Em, Flex, Text } from "@radix-ui/themes";
 import SectionLayout from "@/lib/components/about/SectionLayout";
 import SiteItem from "@/lib/components/about/Site/SiteItem";
-
-export type SiteSkill = { kind: string; value: string };
+import type { SiteSkill } from "@/lib/types";
 
 export default function Site({ skills }: { skills: SiteSkill[] }) {
   return (

@@ -1,12 +1,11 @@
-import LinkItem from "@/lib/components/about/Links/LinkItem";
-import SectionLayout from "@/lib/components/about/SectionLayout";
 import {
   ExternalLinkIcon,
   GitHubLogoIcon,
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
-
-export type MyLink = { name: string; url: string };
+import LinkItem from "@/lib/components/about/Links/LinkItem";
+import SectionLayout from "@/lib/components/about/SectionLayout";
+import type { MyLink } from "@/lib/types";
 
 export default function Links({ links }: { links: MyLink[] }) {
   return (

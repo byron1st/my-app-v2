@@ -7,7 +7,11 @@ import MenuButton from "@/lib/components/common/Toolbar/MenuButton";
 export default function Menus() {
   return (
     <Flex gap="1" align="center">
-      <MenuButton Icon={ReaderIcon} label="posts" href="/posts" />
+      <MenuButton
+        Icon={ReaderIcon}
+        label="posts"
+        href="https://velog.io/@byron1st"
+      />
       <MenuButton Icon={MixIcon} label="projects" href="/projects" />
       <MenuButton Icon={QuestionMarkIcon} label="about" href="/about" />
     </Flex>

@@ -7,7 +7,11 @@ import { Flex } from "@radix-ui/themes";
 export default function Menus() {
   return (
     <Flex gap="4">
-      <MenuButton Icon={ReaderIcon} label="posts" href="/posts" />
+      <MenuButton
+        Icon={ReaderIcon}
+        label="posts"
+        href="https://velog.io/@byron1st"
+      />
       <MenuButton Icon={MixIcon} label="projects" href="/projects" />
       <MenuButton Icon={QuestionMarkIcon} label="about" href="/about" />
     </Flex>

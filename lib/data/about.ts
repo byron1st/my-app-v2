@@ -41,5 +41,4 @@ export const siteSkills: SiteSkill[] = [
   { kind: "Font", value: "Pretendard" },
   { kind: "Font (Mono)", value: "Jetbrains Mono" },
   { kind: "Hosting", value: "Vercel" },
-  { kind: "Database", value: "MongoDB" },
 ];

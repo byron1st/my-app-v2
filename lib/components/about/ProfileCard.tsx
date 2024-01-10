@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Text, Flex, Heading } from "@radix-ui/themes";
 import type { Profile } from "@/lib/types";
+import styles from "@/lib/styles/typography.module.css";
 
 export default function ProfileCard({ profile }: { profile: Profile }) {
   return (
@@ -18,7 +19,7 @@ export default function ProfileCard({ profile }: { profile: Profile }) {
 
         <Text weight="bold">{profile.careers.join(", ")}</Text>
 
-        <Text weight="light" style={{ wordBreak: "keep-all" }}>
+        <Text className={styles.keepall} weight="light">
           {profile.introduction}
         </Text>
       </Flex>

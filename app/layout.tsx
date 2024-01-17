@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono, Noto_Sans_KR } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import classNames from "classnames";
@@ -11,15 +10,15 @@ import Providers from "@/lib/components/home/Providers";
 import "@/app/theme-config.css";
 import "@/app/global.css";
 
-const pretendard = localFont({
-  src: "../public/PretendardVariable.woff2",
-  display: "swap",
-  variable: "--font-pretendard",
-});
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-jetbrainsmono",
+});
+const notoSansKR = Noto_Sans_KR({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-notosanskr",
 });
 
 export const metadata: Metadata = {
@@ -36,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={classNames(pretendard.variable, jetbrainsMono.variable)}
+      className={classNames(jetbrainsMono.variable, notoSansKR.variable)}
       suppressHydrationWarning
     >
       <body>

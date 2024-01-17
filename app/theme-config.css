@@ -5,6 +5,6 @@ body {
 }
 
 .radix-themes {
-  --default-font-family: var(--font-pretendard);
+  --default-font-family: var(--font-notosanskr);
   --code-font-family: var(--font-jetbrainsmono);
 }

@@ -38,7 +38,7 @@ export const siteSkills: SiteSkill[] = [
   { kind: "Server", value: "Next.js" },
   { kind: "UI Framework", value: "RadixUI Themes" },
   { kind: "Icons", value: "RadixUI Icons" },
-  { kind: "Font", value: "Pretendard" },
+  { kind: "Font", value: "Noto Sans KR" },
   { kind: "Font (Mono)", value: "Jetbrains Mono" },
   { kind: "Hosting", value: "Vercel" },
 ];

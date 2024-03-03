@@ -2,13 +2,19 @@
 
 import { Button } from "@radix-ui/themes";
 import { useRouter } from "next/navigation";
+import { ChevronLeftIcon } from "@radix-ui/react-icons";
 
 export default function BackButton() {
   const router = useRouter();
 
   const onBack = () => {
-    router.back();
+    router.push("/posts");
   };
 
-  return <Button onClick={onBack}>Back</Button>;
+  return (
+    <Button onClick={onBack} variant="ghost">
+      <ChevronLeftIcon />
+      Back to the list
+    </Button>
+  );
 }

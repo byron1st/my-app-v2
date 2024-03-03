@@ -1,5 +1,4 @@
 import { Flex, Separator, Text } from "@radix-ui/themes";
-import styles from "@/lib/styles/typography.module.css";
 
 export default function ProjectDetailItem({
   label,
@@ -19,13 +18,7 @@ export default function ProjectDetailItem({
           </Text>
         </Flex>
 
-        <Flex my="1">
-          {children ?? (
-            <Text className={styles.keepall} size="2">
-              {value}
-            </Text>
-          )}
-        </Flex>
+        <Flex my="1">{children ?? <Text size="2">{value}</Text>}</Flex>
       </Flex>
       <Separator size="4" />
     </>

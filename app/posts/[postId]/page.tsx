@@ -1,9 +1,10 @@
 import notion from "@/lib/notion";
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-import { Button, Heading, Separator } from "@radix-ui/themes";
+import { Heading, Separator } from "@radix-ui/themes";
 import PostContent from "@/lib/components/post/PostContent";
 import BackButton from "@/lib/components/post/BackButton";
-import { Suspense } from "react";
+import { getTitle } from "@/lib/utils/posts";
+import PostHeaderDescription from "@/lib/components/post/PostHeaderDescription";
 
 async function getPost(postId: string) {
   const [page, content] = await Promise.all([
@@ -23,22 +24,16 @@ export default async function Page({ params }: { params: { postId: string } }) {
 
   return (
     <>
-      {/*<BackButton />*/}
+      <BackButton />
 
-      <Heading mb="4">{postTitle}</Heading>
+      <Heading trim="end" mb="2">
+        {postTitle}
+      </Heading>
+      <PostHeaderDescription post={post} />
 
       <Separator orientation="horizontal" size="4" mb="4" />
 
       <PostContent content={content} />
     </>
   );
-}
-
-function getTitle(page: PageObjectResponse): string {
-  const nameProp = page.properties["Name"];
-  if (!nameProp) return "";
-  if (nameProp.type !== "title") return "";
-  if (nameProp.title.length === 0) return "";
-
-  return nameProp.title[0].plain_text;
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Noto_Sans_KR } from "next/font/google";
+import { Noto_Sans_KR } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import classNames from "classnames";
@@ -10,11 +10,6 @@ import Providers from "@/lib/components/home/Providers";
 import "@/app/theme-config.css";
 import "@/app/global.css";
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-jetbrainsmono",
-});
 const notoSansKR = Noto_Sans_KR({
   subsets: ["latin"],
   display: "swap",
@@ -35,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={classNames(jetbrainsMono.variable, notoSansKR.variable)}
+      className={classNames(notoSansKR.variable)}
       suppressHydrationWarning
     >
       <body>

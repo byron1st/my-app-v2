@@ -3,7 +3,15 @@
 import notion from "@/lib/notion";
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import PostListItem from "@/lib/components/posts/PostListItem";
-import { Badge, Em, Flex, Heading, Separator } from "@radix-ui/themes";
+import {
+  Badge,
+  Em,
+  Flex,
+  Heading,
+  Link,
+  Separator,
+  Text,
+} from "@radix-ui/themes";
 import TagsListView from "@/lib/components/posts/TagsListView";
 
 async function getPosts(tags: string[]): Promise<PageObjectResponse[]> {
@@ -49,7 +57,13 @@ export default async function Posts({
 
   return (
     <>
-      <Heading mb="4">Posts</Heading>
+      <Flex justify="between" align="start">
+        <Heading mb="4">Posts</Heading>
+
+        <Text size="1">
+          <Link href="https://velog.io/@byron1st">Velog (archived)</Link>
+        </Text>
+      </Flex>
 
       <TagsListView tagsList={tagsList} tags={tags} />
 

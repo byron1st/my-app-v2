@@ -8,7 +8,7 @@ export default function CalloutBlock({
 }: {
   block: CalloutBlockObjectResponse;
 }) {
-  const icon = useMemo(() => getCalloutIcon(block), []);
+  const icon = useMemo(() => getCalloutIcon(block), [block]);
 
   return (
     <Callout.Root>

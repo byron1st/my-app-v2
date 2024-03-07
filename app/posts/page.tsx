@@ -3,15 +3,7 @@
 import notion from "@/lib/notion";
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import PostListItem from "@/lib/components/posts/PostListItem";
-import {
-  Badge,
-  Em,
-  Flex,
-  Heading,
-  Link,
-  Separator,
-  Text,
-} from "@radix-ui/themes";
+import { Flex, Heading, Link, Separator, Text } from "@radix-ui/themes";
 import TagsListView from "@/lib/components/posts/TagsListView";
 
 async function getPosts(tags: string[]): Promise<PageObjectResponse[]> {

@@ -1,8 +1,8 @@
 "use client";
 
-import { Badge, Em, Flex, Separator, Text } from "@radix-ui/themes";
+import { Em, Flex, Separator, Text } from "@radix-ui/themes";
 import { useMemo } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import PostTag from "@/lib/components/common/PostTag";
 
 export default function TagsListView({

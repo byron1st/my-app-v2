@@ -3,9 +3,7 @@
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import { Badge, Flex, Heading, Link, Separator, Text } from "@radix-ui/themes";
 import { useMemo } from "react";
-import dayjs from "dayjs";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import NLink from "next/link";
 import PostTag from "@/lib/components/common/PostTag";
 import {
   checkIfShortPost,

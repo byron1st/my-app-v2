@@ -14,11 +14,10 @@ export const profile: Profile = {
 
 export const interest: Interest = {
   developer: [
-    "Go, TypeScript",
-    "Hyperledger Fabric, Ethereum",
-    "Fastify, Next.js, SvelteKit",
+    "Go, TypeScript, Move",
+    "Aptos, Ethereum, Hyperledger Fabric",
+    "Fastify, Next.js, React",
     "MongoDB",
-    "React, Svelte",
   ],
   researcher: [
     "Software Engineering",
@@ -39,6 +38,6 @@ export const siteSkills: SiteSkill[] = [
   { kind: "UI Framework", value: "RadixUI Themes" },
   { kind: "Icons", value: "RadixUI Icons" },
   { kind: "Font", value: "Noto Sans KR" },
-  { kind: "Font (Mono)", value: "Jetbrains Mono" },
+  { kind: "CMS", value: "Notion" },
   { kind: "Hosting", value: "Vercel" },
 ];

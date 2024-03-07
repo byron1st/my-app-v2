@@ -1,5 +1,3 @@
-// https://www.notion.so/hwiahn/208c3636ee604e419401430118b6564a?v=5ccd8a4452af4031b0908717c6c49fdc
-
 import notion from "@/lib/notion";
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import PostListItem from "@/lib/components/posts/PostListItem";

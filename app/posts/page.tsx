@@ -2,6 +2,7 @@ import PostListItem from "@/lib/components/posts/PostListItem";
 import { Flex, Heading, Link, Separator, Text } from "@radix-ui/themes";
 import TagsListView from "@/lib/components/posts/TagsListView";
 import { getPosts, getTagsList } from "@/lib/notion/api";
+import { ExternalLinkIcon } from "@radix-ui/react-icons";
 
 export const revalidate = 86400; // 1 day
 
@@ -20,7 +21,11 @@ export default async function Posts({
         <Heading mb="4">Posts</Heading>
 
         <Text size="1">
-          <Link href="https://velog.io/@byron1st">Velog (archived)</Link>
+          <Link href="https://velog.io/@byron1st" target="_blank">
+            <Flex align="center" gap="1">
+              <ExternalLinkIcon /> Velog (archived)
+            </Flex>
+          </Link>
         </Text>
       </Flex>
 

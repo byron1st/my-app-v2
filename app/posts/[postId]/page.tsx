@@ -1,22 +1,11 @@
-import notion from "@/lib/notion";
-import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import { Heading, Separator } from "@radix-ui/themes";
 import PostContent from "@/lib/components/post/PostContent";
-import BackButton from "@/lib/components/post/BackButton";
+import BackButton from "@/lib/components/common/BackButton";
 import { getTitle } from "@/lib/utils/posts";
 import PostHeaderDescription from "@/lib/components/post/PostHeaderDescription";
+import { getPost } from "@/lib/notion/api";
 
-async function getPost(postId: string) {
-  const [page, content] = await Promise.all([
-    notion.pages.retrieve({ page_id: postId }),
-    notion.blocks.children.list({
-      block_id: postId,
-      page_size: 100,
-    }),
-  ]);
-
-  return { post: page as PageObjectResponse, content };
-}
+export const revalidate = 86400; // 1 day
 
 export default async function Page({ params }: { params: { postId: string } }) {
   const { post, content } = await getPost(params.postId);
@@ -24,7 +13,7 @@ export default async function Page({ params }: { params: { postId: string } }) {
 
   return (
     <>
-      <BackButton />
+      <BackButton target="posts" />
 
       <Heading trim="end" mb="2">
         {postTitle}

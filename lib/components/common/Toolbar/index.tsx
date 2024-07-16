@@ -4,7 +4,6 @@ import { Flex } from "@radix-ui/themes";
 import { usePathname } from "next/navigation";
 import ColorModeSelector from "@/lib/components/common/Toolbar/ColorModeSelector";
 import HomeButton from "@/lib/components/common/Toolbar/HomeButton";
-import Menus from "@/lib/components/common/Toolbar/Menus";
 
 export default function Toolbar() {
   const pathname = usePathname();
@@ -15,8 +14,6 @@ export default function Toolbar() {
         {pathname === "/" ? null : <HomeButton />}
         <ColorModeSelector />
       </Flex>
-
-      {pathname === "/" ? null : <Menus />}
     </Flex>
   );
 }

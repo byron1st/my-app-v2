@@ -1,5 +1,7 @@
 import type { Project } from "@/lib/types";
 
+export const selectedProjectIds: string[] = ["2", "5", "6", "3"];
+
 export const projects: Project[] = [
   {
     id: "1",

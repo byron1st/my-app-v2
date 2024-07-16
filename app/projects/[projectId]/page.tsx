@@ -1,8 +1,8 @@
 import { projects } from "@/lib/data";
-import { Project } from "@/lib/types";
 import ProjectDetail from "@/lib/components/project/ProjectDetail";
 import ProjectHeader from "@/lib/components/project/ProjectHeader";
 import BackButton from "@/lib/components/common/BackButton";
+import type { Project } from "@/lib/types";
 
 function getProject(projectId: string): Project {
   const project = projects.find((project) => project.id === projectId);
@@ -16,7 +16,7 @@ export default function Project({ params }: { params: { projectId: string } }) {
 
   return (
     <>
-      <BackButton target="projects" />
+      <BackButton />
       <ProjectHeader project={project} />
       <ProjectDetail project={project} />
     </>

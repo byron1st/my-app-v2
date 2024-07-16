@@ -3,8 +3,6 @@ export type Interest = {
   researcher: string[];
 };
 
-export type MyLink = { name: string; url: string };
-
 export type SiteSkill = { kind: string; value: string };
 
 export type Profile = {

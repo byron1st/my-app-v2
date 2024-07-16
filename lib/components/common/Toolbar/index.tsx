@@ -10,7 +10,7 @@ export default function Toolbar() {
   const pathname = usePathname();
 
   return (
-    <Flex width="100%" height="7" justify="between" align="center" px="2">
+    <Flex width="100%" height="40px" justify="between" align="center" px="2">
       <Flex gap="2" align="center">
         {pathname === "/" ? null : <HomeButton />}
         <ColorModeSelector />

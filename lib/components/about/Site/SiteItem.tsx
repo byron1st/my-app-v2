@@ -9,7 +9,7 @@ export default function SiteItem({
 }) {
   return (
     <Card style={{ minWidth: "100px" }}>
-      <Flex direction="column" shrink="0">
+      <Flex direction="column" flexShrink="0">
         <Text size="1" color="gray" weight="light" as="div">
           {label}
         </Text>

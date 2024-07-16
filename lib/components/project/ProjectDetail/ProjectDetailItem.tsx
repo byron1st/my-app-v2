@@ -12,7 +12,7 @@ export default function ProjectDetailItem({
   return (
     <>
       <Flex gap="3">
-        <Flex justify="end" shrink="0" my="1" style={{ width: "96px" }}>
+        <Flex justify="end" flexShrink="0" my="1" style={{ width: "96px" }}>
           <Text size="2" weight="bold">
             {label}
           </Text>

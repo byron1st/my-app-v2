@@ -31,7 +31,9 @@ export default function ProjectItem({ project }: { project: Project }) {
               Icon={BackpackIcon}
               value={
                 project.kind === "work"
-                  ? project.company ?? ""
+                  ? project.company
+                    ? project.company
+                    : ""
                   : project.kind === "research"
                     ? "연구 프로젝트"
                     : "개인 프로젝트"

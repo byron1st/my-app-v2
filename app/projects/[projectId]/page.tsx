@@ -11,7 +11,10 @@ function getProject(projectId: string): Project {
   return project;
 }
 
-export default function Project({ params }: { params: { projectId: string } }) {
+export default async function Project(props: {
+  params: Promise<{ projectId: string }>;
+}) {
+  const params = await props.params;
   const project = getProject(params.projectId);
 
   return (
